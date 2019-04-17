@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 
 @Component({
-  selector : 'trg-appshell',
+  selector : 'trg-tooltip-page',
   templateUrl : './tooltip.page.html',
   styleUrls : ['tooltip.page.scss']
 })
