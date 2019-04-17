@@ -1,9 +1,11 @@
 import {NgModule} from '@angular/core';
-import {NgbAlertModule, NgbButtonsModule} from "@ng-bootstrap/ng-bootstrap";
+import {NgbAlertModule, NgbButtonsModule, NgbCollapseModule, NgbDropdownModule} from '@ng-bootstrap/ng-bootstrap';
 
 export const BOOTSTRAP_MODULE = [
   NgbAlertModule,
-  NgbButtonsModule
+  NgbButtonsModule,
+  NgbCollapseModule,
+  NgbDropdownModule
 ];
 
 @NgModule({
