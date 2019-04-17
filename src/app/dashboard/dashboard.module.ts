@@ -5,17 +5,22 @@ import {TypeaheadPage} from "./typeahead/typeahead.page";
 import {TooltipPage} from "./tooltip/tooltip.page";
 import {TimepickerPage} from "./timepicker/timepicker.page";
 import {RatingPage} from "./rating/rating.page";
+import {CarouselPage} from './carousel/carousel.page';
+import {AlertPage} from './alert/alert.page';
+
 
 
 @NgModule({
-  bootstrap:[],
+  bootstrap: [],
   providers: [],
   declarations: [ExamplePage,
                 TypeaheadPage,
                 TooltipPage,
                 TimepickerPage,
-                RatingPage],
-  imports:[SharedModule],
+                RatingPage,
+                CarouselPage,
+                AlertPage],
+  imports: [SharedModule],
   exports: [],
   entryComponents: [],
 })

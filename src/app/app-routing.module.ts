@@ -5,6 +5,8 @@ import {ExamplePage} from "./dashboard/example/example.page";
 import {TooltipPage} from "./dashboard/tooltip/tooltip.page";
 import {TimepickerPage} from "./dashboard/timepicker/timepicker.page";
 import {RatingPage} from "./dashboard/rating/rating.page";
+import {CarouselPage} from './dashboard/carousel/carousel.page';
+import {AlertPage} from './dashboard/alert/alert.page';
 
 
 const routes: Routes = [
@@ -21,6 +23,9 @@ const routes: Routes = [
       {path: 'tooltip', component: TooltipPage},
       {path: 'timepicker', component: TimepickerPage},
       {path: 'rating', component: RatingPage},
+      {path: 'dashboard', component: ExamplePage},
+      {path: 'carousel', component: CarouselPage},
+      {path: 'alert', component: AlertPage}
     ]
   }
 ];
