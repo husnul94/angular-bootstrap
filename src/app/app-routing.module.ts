@@ -7,6 +7,8 @@ import {TimepickerPage} from "./dashboard/timepicker/timepicker.page";
 import {RatingPage} from "./dashboard/rating/rating.page";
 import {CarouselPage} from './dashboard/carousel/carousel.page';
 import {AlertPage} from './dashboard/alert/alert.page';
+import {CollapsePage} from './dashboard/collapse/collapse.page';
+import {DropdownBasicPage} from './dashboard/dropdown/dropdown-basic.page';
 
 
 const routes: Routes = [
@@ -20,10 +22,11 @@ const routes: Routes = [
     children: [
       {path: '', pathMatch: 'full', redirectTo: 'dashboard'},
       {path: 'dashboard', component: ExamplePage},
+      {path: 'collapse', component: CollapsePage},
+      {path: 'dropdown', component: DropdownBasicPage},
       {path: 'tooltip', component: TooltipPage},
       {path: 'timepicker', component: TimepickerPage},
       {path: 'rating', component: RatingPage},
-      {path: 'dashboard', component: ExamplePage},
       {path: 'carousel', component: CarouselPage},
       {path: 'alert', component: AlertPage}
     ]
