@@ -1,7 +1,9 @@
-import {RouterModule, Routes} from "@angular/router";
-import {NgModule} from "@angular/core";
-import {AppshellComponent} from "./appshell/appshell.component";
-import {ExamplePage} from "./dashboard/example/example.page";
+import {RouterModule, Routes} from '@angular/router';
+import {NgModule} from '@angular/core';
+import {AppshellComponent} from './appshell/appshell.component';
+import {ExamplePage} from './dashboard/example/example.page';
+import {CarouselPage} from './dashboard/carousel/carousel.page';
+import {AlertPage} from './dashboard/alert/alert.page';
 
 
 const routes: Routes = [
@@ -14,7 +16,9 @@ const routes: Routes = [
     component: AppshellComponent,
     children: [
       {path: '', pathMatch: 'full', redirectTo: 'dashboard'},
-      {path: 'dashboard', component: ExamplePage}
+      {path: 'dashboard', component: ExamplePage},
+      {path: 'carousel', component: CarouselPage},
+      {path: 'alert', component: AlertPage}
     ]
   }
 ];
