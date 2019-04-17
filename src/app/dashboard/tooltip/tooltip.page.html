@@ -1,0 +1,76 @@
+<!--Tooltip Basic-->
+<p>
+  Quick and easy tooltips
+</p>
+<button type="button" class="btn btn-outline-secondary mr-2" placement="top" ngbTooltip="Tooltip on top">
+  Top
+</button>
+<button type="button" class="btn btn-outline-secondary mr-2" placement="right" ngbTooltip="Tooltip on right">
+  Right
+</button>
+<button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Tooltip on bottom">
+  Bottom
+</button>
+<button type="button" class="btn btn-outline-secondary mr-2" placement="left" ngbTooltip="Tooltip on left">
+  Left
+</button>
+
+<hr>
+<!--HTML and bindings in tooltips-->
+<ng-template #tipContent>Hello, <b>{{name}}</b>!</ng-template>
+<button type="button" class="btn btn-outline-secondary" [ngbTooltip]="tipContent">
+  For markup and bindings!
+</button>
+
+<hr>
+<!--Custom triggers-->
+<button type="button" class="btn btn-outline-secondary" ngbTooltip="You see, I show up on click!" triggers="click:blur">
+  Click me!
+</button>
+
+<hr>
+<!--manual triggers-->
+<button type="button" class="btn btn-outline-secondary mr-2" placement="top" ngbTooltip="What a great tip!" [autoClose]="false" triggers="manual" #t="ngbTooltip" (click)="t.open()">
+  Click to open
+</button>
+<button type="button" class="btn btn-outline-secondary mr-2" (click)="t.close()">
+  Click to close
+</button>
+
+<hr>
+<!--Automatic closing with keyboard and mouse-->
+<ul>
+  <li class="mb-2">
+    click inside:
+    <button
+      type="button" class="btn btn-outline-secondary"
+      triggers="click" [autoClose]="'inside'" ngbTooltip="Click inside or press Escape to close">
+      Click to toggle
+    </button>
+  </li>
+
+  <li class="mb-2">
+    click outside:
+    <button
+      type="button" class="btn btn-outline-secondary"
+      triggers="click" [autoClose]="'outside'" ngbTooltip="Click outside or press Escape to close">
+      Click to toggle
+    </button>
+  </li>
+
+  <li class="mb-2">
+    all clicks:
+    <button
+      type="button" class="btn btn-outline-secondary"
+      triggers="click" [autoClose]="true" ngbTooltip="Click anywhere or press Escape to close (try the toggling element too)"
+      #tooltip3="ngbTooltip">
+      Click to toggle
+    </button>
+    &nbsp;
+    <button type="button" class="btn btn-outline-secondary mr-2" (click)="tooltip3.toggle()">
+      Click to toggle the external tooltip
+    </button>
+  </li>
+</ul>
+
+
